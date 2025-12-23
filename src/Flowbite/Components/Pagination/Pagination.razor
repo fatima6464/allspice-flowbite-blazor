@@ -59,8 +59,8 @@
     [Parameter] public bool ShowPreviousNext { get; set; } = true;
     [Parameter] public string PreviousText { get; set; } = "Previous";
     [Parameter] public string NextText { get; set; } = "Next";
-    [Parameter] public object? PreviousIcon { get; set; }
-    [Parameter] public object? NextIcon { get; set; }
+    [Parameter] public Type? PreviousIcon { get; set; }
+    [Parameter] public Type? NextIcon { get; set; }
     [Parameter] public EventCallback<int> OnPageChanged { get; set; }
     [Parameter] public EventCallback<int> CurrentPageChanged { get; set; } 
 
