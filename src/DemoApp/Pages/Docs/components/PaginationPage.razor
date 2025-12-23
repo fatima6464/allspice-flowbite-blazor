@@ -38,8 +38,8 @@
                           SupportedLanguages="@(new[] { "razor" })">
             <PreviewContent>
                 @{
-                                var prevIcon = new ChevronLeftIcon();
-                var nextIcon = new ChevronRightIcon();
+                                object prevIcon = new ChevronLeftIcon();
+                                object nextIcon = new ChevronRightIcon();
                                 }
                 <Pagination TotalPages="10" CurrentPage="3"
                             PreviousIcon="@prevIcon"

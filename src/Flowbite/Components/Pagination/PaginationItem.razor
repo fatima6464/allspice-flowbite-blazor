@@ -16,7 +16,7 @@
         <span class="@GetClasses()" data-testid="flowbite-pagination-item" aria-disabled="true">
             @if (Icon != null)
             {
-                <DynamicComponent Type="@Icon" Parameters="@IconParams" />
+                <DynamicComponent Type="@((Type)Icon)"  Parameters="@IconParams" />
             }
             @ChildContent
         </span>
@@ -32,7 +32,7 @@
            aria-label="@GetAriaLabel()">
             @if (Icon != null)
             {
-                <DynamicComponent Type="@Icon.GetType()" Parameters="@IconParams" />
+                <DynamicComponent Type="@((Type)Icon)" Parameters="@IconParams" />
             }
             @ChildContent
         </a>
@@ -71,7 +71,7 @@
     public bool IsEllipsis { get; set; }
 
     [Parameter]
-    public Type? Icon { get; set; }
+    public object? Icon { get; set; }
 
     [Parameter]
     public string IconClass { get; set; } = "w-3 h-3 ms-1 rtl:rotate-180";
